@@ -5,6 +5,7 @@ import {
   TextProps,
   ViewProps,
   TouchableOpacityProps,
+  FlatListProps,
 } from 'react-native';
 
 export interface ToggleProps extends TouchableOpacityProps {
@@ -18,7 +19,7 @@ export interface ItemSelected {
   item: string;
 }
 
-export declare type SelectBoxProps = {
+export class SelectBoxStyleProps {
   labelStyle?: StyleProp<TextProps>;
   containerStyle?: StyleProp<ViewProps>;
   inputFilterContainerStyle?: StyleProp<ViewProps>;
@@ -30,29 +31,40 @@ export declare type SelectBoxProps = {
   multiListEmptyLabelStyle?: StyleProp<TextProps>;
   listEmptyLabelStyle?: StyleProp<TextProps>;
   selectedItemStyle?: StyleProp<TextProps>;
+}
+
+export class SelectBoxOptionProps extends SelectBoxStyleProps {
+  hideInputFilter?: boolean;
+  isMulti: boolean;
+  removeItemsSelected?: boolean;
+  noEditable?: boolean;
+}
+
+export class SelectBoxVariableProps extends SelectBoxOptionProps {
   listEmptyText?: string;
-  selectIcon?: React.ReactNode;
   label: string;
   inputPlaceholder?: string;
-  hideInputFilter?: boolean;
   width?: number | string;
-  isMulti: boolean;
-  options: any | ItemSelected[];
-  value?: ItemSelected;
-  selectedValues: any | ItemSelected[];
   arrowIconColor?: string;
   searchIconColor?: string;
   toggleIconColor?: string;
+}
+
+export declare class SelectBoxProps extends SelectBoxVariableProps {
+  options: any | ItemSelected[];
+  value?: ItemSelected;
+  selectedValues: any | ItemSelected[];
   searchInputProps?: any;
-  multiSelectInputFieldProps?: any;
+  multiSelectInputFieldProps?: FlatListProps<any>;
   listOptionProps?: any;
+  selectIcon?: React.ReactNode;
+
+  /* Functional */
   onChange?(item?: any): void;
   onMultiSelect?(item?: any): void;
   onTapClose?(item?: any): void;
-  removeItemsSelected?: boolean;
   editStatus?(item: any): void;
-  noEditable?: boolean;
-};
+}
 
 declare const SelectBox: React.FC<SelectBoxProps>;
 

@@ -1,21 +1,21 @@
-# react-native-multi-selectbox
+# react-native-multi-select
 
 [![npm version](https://badge.fury.io/js/react-native-multi-selectbox.svg)](https://badge.fury.io/js/react-native-multi-selectbox)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-multi-selectbox.svg?style=flat-square)](https://www.npmjs.com/package/react-native-multi-selectbox)
 
 Platform independent (Android / iOS) Selectbox | Picker | Multi-select | Multi-picker. The idea is to bring out the common user-interface & user-experience on both platforms.
 
-![demo](https://raw.githubusercontent.com/sauzy34/react-native-multi-selectbox/master/demo.gif)
+![demo](https://github.com/OldBoyHusc/react-native-multi-select/blob/master/demo.gif)
 
 ## Getting started
 
 ### How to install 🎹
 
-### `npm install react-native-multi-selectbox`
+### `npm i git+https://github.com/OldBoyHusc/react-native-multi-select`
 
 or
 
-### `yarn add react-native-multi-selectbox`
+### `yarn add git+https://github.com/OldBoyHusc/react-native-multi-select`
 
 ### Usage 𖣠
 
@@ -159,11 +159,11 @@ multiSelectInputFieldProps         | object |                                   
 
 ## Want to be a contributor? 👷🏼‍♂️👷🏼‍♀️
 
-Check-in `develop` branch and submit a new pull-request
+Check-in `developer` branch and submit a new pull-request
 
 ## Issues or feature request? ✍🏼
 
-You can submit a request on https://github.com/sauzy34/react-native-multi-selectbox/issues
+You can submit a request on https://github.com/OldBoyHusc/react-native-multi-select/issues
 
 ## Support & Share 💆🏼‍♂️
 

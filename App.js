@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Text, View } from 'react-native'
-import SelectBox from 'react-native-multi-selectbox'
-import { xorBy } from 'lodash'
+import React, { useState } from 'react';
+import { Text, View } from 'react-native';
+import SelectBox from 'react-native-multi-select';
+import { xorBy } from 'lodash';
 
 // Options data must contain 'item' & 'id' keys
 
@@ -59,11 +59,11 @@ const K_OPTIONS = [
     item: 'Leicester City FC',
     id: 'LEI',
   },
-]
+];
 
 function App() {
-  const [selectedTeam, setSelectedTeam] = useState({})
-  const [selectedTeams, setSelectedTeams] = useState([])
+  const [selectedTeam, setSelectedTeam] = useState({});
+  const [selectedTeams, setSelectedTeams] = useState([]);
   return (
     <View style={{ margin: 30 }}>
       <View style={{ width: '100%', alignItems: 'center' }}>
@@ -88,15 +88,15 @@ function App() {
         isMulti
       />
     </View>
-  )
+  );
 
   function onMultiChange() {
-    return (item) => setSelectedTeams(xorBy(selectedTeams, [item], 'id'))
+    return (item) => setSelectedTeams(xorBy(selectedTeams, [item], 'id'));
   }
 
   function onChange() {
-    return (val) => setSelectedTeam(val)
+    return (val) => setSelectedTeam(val);
   }
 }
 
-export default App
+export default App;
