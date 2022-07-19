@@ -167,4 +167,4 @@ You can submit a request on https://github.com/sauzy34/react-native-multi-select
 
 ## Support & Share 💆🏼‍♂️
 
-Please star the repository on Github to enhance the reach to more developers.
+Please star the repository on Github to enhance the reach to more developers..
